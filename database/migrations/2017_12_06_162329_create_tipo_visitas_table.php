@@ -13,8 +13,8 @@ class CreateTipoVisitasTable extends Migration
      */
     public function up()
     {
-        Schema::create('tipo_visita', function (Blueprint $table) {
-            $table->increments('id_tipo_visita');
+        Schema::create('tipo_visitas', function (Blueprint $table) {
+            $table->increments('id');
             $table->string('descripcion_tipo_visita');
             $table->timestamps();
         });
@@ -27,6 +27,6 @@ class CreateTipoVisitasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tipo_viita');
+        Schema::dropIfExists('tipo_visitas');
     }
 }

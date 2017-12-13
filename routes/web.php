@@ -18,3 +18,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// Visitantes
+
+Route::resource('/visitantes', 'Visitantes');
+
+// Gerencias
+
+Route::resource('/gerencias', 'Gerencias');

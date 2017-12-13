@@ -13,8 +13,8 @@ class CreateGerenciasTable extends Migration
      */
     public function up()
     {
-        Schema::create('gerencia', function (Blueprint $table) {
-            $table->increments('id_gerencia');
+        Schema::create('gerencias', function (Blueprint $table) {
+            $table->increments('id');
             $table->string('descripcion_gerencia');
             $table->timestamps();
         });
@@ -27,6 +27,6 @@ class CreateGerenciasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('gerencia');
+        Schema::dropIfExists('gerencias');
     }
 }

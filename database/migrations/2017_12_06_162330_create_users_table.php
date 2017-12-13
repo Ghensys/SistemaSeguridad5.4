@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('nombre')->nullable();
             $table->string('apellido')->nullable();
             $table->integer('id_perfil')->unsigned()->nullable();
-            $table->foreign('id_perfil')->references('id_perfil')->on('perfil');
+            $table->foreign('id_perfil')->references('id')->on('perfils');
             $table->rememberToken();
             $table->timestamps();
         });

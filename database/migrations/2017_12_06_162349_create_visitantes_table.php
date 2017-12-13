@@ -13,8 +13,8 @@ class CreateVisitantesTable extends Migration
      */
     public function up()
     {
-        Schema::create('visitante', function (Blueprint $table) {
-            $table->increments('id_visitante');
+        Schema::create('visitantes', function (Blueprint $table) {
+            $table->increments('id');
             $table->timestamp('fecha_hora_entrada');
             $table->integer('cedula');
             $table->integer('n_pase');
@@ -24,9 +24,9 @@ class CreateVisitantesTable extends Migration
             $table->integer('edad');
             $table->string('zona_residencia');
             $table->integer('id_gerencia')->unsigned();
-            $table->foreign('id_gerencia')->references('id_gerencia')->on('gerencia');
+            $table->foreign('id_gerencia')->references('id')->on('gerencias');
             $table->integer('id_tipo_visita')->unsigned();
-            $table->foreign('id_tipo_visita')->references('id_tipo_visita')->on('tipo_visita');
+            $table->foreign('id_tipo_visita')->references('id')->on('tipo_visitas');
             $table->string('responsable');
             $table->timestamp('fecha_hora_salida');
             $table->integer('id_usuario')->unsigned();
@@ -34,6 +34,7 @@ class CreateVisitantesTable extends Migration
             $table->string('observacion');
             $table->integer('n_certificado');
             $table->integer('estatus');
+            $table->string('urlImg');
             $table->timestamps();
         });
     }

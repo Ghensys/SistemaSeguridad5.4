@@ -15,6 +15,8 @@
                     @endif
 
                     You are logged in!
+                    @include('layouts.formulario_visitante') 
+                    <!--@include('layouts.registrar_gerencia')-->
                 </div>
             </div>
         </div>

@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('FILESYSTEM_DRIVER', 'local'),
+    'default' => env('FILESYSTEM_DRIVER', 'imgVisitantes'),
 
     /*
     |--------------------------------------------------------------------------
@@ -42,6 +42,11 @@ return [
     */
 
     'disks' => [
+
+        'imgVisitantes' => [
+            'driver' => 'local',
+            'root' => public_path('imgVisitantes'),
+        ],
 
         'local' => [
             'driver' => 'local',

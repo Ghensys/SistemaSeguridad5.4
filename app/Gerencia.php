@@ -12,6 +12,6 @@ class Gerencia extends Model
      * @var array
      */
     protected $fillable = [
-        'nombre_gerencia',
+        'descipcion_gerencia',
     ];
 }
